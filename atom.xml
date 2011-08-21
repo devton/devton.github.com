@@ -4,7 +4,7 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-08-21T12:56:23-03:00</updated>
+  <updated>2011-08-21T13:08:18-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
@@ -17,8 +17,9 @@
     <link href="http://devton.github.com/blog/2011/08/19/hello-world/"/>
     <updated>2011-08-19T15:35:00-03:00</updated>
     <id>http://devton.github.com/blog/2011/08/19/hello-world</id>
-    <content type="html">&lt;p&gt;como costume o primeiro post deve ser o famoso &quot;Olá mundo&quot;.
-colocando em pratica novamente a minha vontade de blogar agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvolvimento e blah blah blah… (tudo)&lt;/p&gt;
+    <content type="html">&lt;p&gt;como costume o primeiro post deve ser o famoso &quot;Olá mundo&quot;.&lt;br/&gt;
+Colocando em pratica novamente a minha vontade de blogar,
+agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvolvimento e blah blah blah… (tudo)&lt;/p&gt;
 
 &lt;p&gt;Abaixo uma tirinha pra começar.&lt;/p&gt;
 
