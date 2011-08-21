@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>devTon Blog</title>
+  <link href="http://devton.github.com/atom.xml" rel="self"/>
+  <link href="http://devton.github.com/"/>
+  <updated>2011-08-21T12:37:16-03:00</updated>
+  <id>http://devton.github.com/</id>
+  <author>
+    <name>Antônio Roberto Silva</name>
+    
+  </author>
+
+  
+  <entry>
+    <title>p "Hello, world"</title>
+    <link href="http://devton.github.com/blog/2011/08/19/hello-world/"/>
+    <updated>2011-08-19T15:35:00-03:00</updated>
+    <id>http://devton.github.com/blog/2011/08/19/hello-world</id>
+    <content type="html">&lt;p&gt;como costume o primeiro post deve ser o famoso &quot;Olá mundo&quot;.
+colocando em pratica novamente a minha vontade de blogar agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvolvimento e blah blah blah… (tudo)&lt;/p&gt;
+
+&lt;p&gt;Abaixo uma tirinha pra começar.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pichub.in/Rlf1a7&quot;&gt;&lt;img src=&quot;http://store.pichub.in/Rlf1a7/medium-parse_error_before_yourass_token.png&quot; alt=&quot;Hello World&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+</feed>
