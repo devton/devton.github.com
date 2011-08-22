@@ -2,14 +2,18 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://devton.github.com/blog/2011/08/19/hello-world/</loc>
-        <lastmod>2011-08-21T13:07:51-03:00</lastmod>
+        <lastmod>2011-08-22T10:57:11-03:00</lastmod>
+    </url>
+    <url>
+        <loc>http://devton.github.com/blog/2011/08/22/rs-on-rails-com-r--50/</loc>
+        <lastmod>2011-08-22T11:00:23-03:00</lastmod>
     </url>
     <url>
         <loc>http://devton.github.com/blog/archives/</loc>
-        <lastmod>2011-08-21T13:07:51-03:00</lastmod>
+        <lastmod>2011-08-22T11:00:23-03:00</lastmod>
     </url>
     <url>
         <loc>http://devton.github.com/</loc>
-        <lastmod>2011-08-21T13:07:51-03:00</lastmod>
+        <lastmod>2011-08-22T11:00:23-03:00</lastmod>
     </url>
 </urlset>
