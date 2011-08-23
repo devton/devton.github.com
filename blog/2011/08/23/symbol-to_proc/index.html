@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>devTon Blog: p "Hello, world"</title>
+  <title>devTon Blog: Symbol#to_proc, um atalho interessante :)</title>
   <meta name="author" content="Antônio Roberto Silva">
   
 
@@ -16,7 +16,7 @@
 
   
 
-  <link rel="canonical" href="http://devton.github.com/blog/2011/08/19/hello-world/"/>
+  <link rel="canonical" href="http://devton.github.com/blog/2011/08/23/symbol-to_proc/"/>
   <link href="/favicon.png" rel="shortcut icon" />
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -97,7 +97,7 @@
   
   <header>
     
-      <h1 class="entry-title">P &#8220;Hello, World&#8221;</h1>
+      <h1 class="entry-title">Symbol#to_proc, Um Atalho Interessante :)</h1>
     
     
       <p class="meta">
@@ -105,7 +105,7 @@
 
 
 
-<time datetime="2011-08-19 15:35:00 -0300" pubdate  updated >Aug 19<span>th</span>, 2011</time>
+<time datetime="2011-08-23 13:51:00 -0300" pubdate  updated >Aug 23<span>rd</span>, 2011</time>
 
 
 </p>
@@ -113,13 +113,41 @@
   </header>
 
 
-<div class="entry-content"><p>como costume o primeiro post deve ser o famoso &#8220;Olá mundo&#8221;.<br/>
-Colocando em pratica novamente a minha vontade de blogar,
-agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvolvimento e blah blah blah… (tudo)</p>
+<div class="entry-content"><p>Uma vez estava feliz dando manutenção em um código que continha a seguinte linha:</p>
 
-<p>Abaixo uma tirinha pra começar.</p>
+<div><figure role=code><figcaption><span>collection_some_attribute.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">collection</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:some_attribute</span><span class="p">)</span>
+</div></code></pre></td></tr></table></div></figure></div>
 
-<p><a href="http://pichub.in/Rlf1a7"><img src="http://store.pichub.in/Rlf1a7/medium-parse_error_before_yourass_token.png" alt="Hello World" /></a></p>
+
+<p>omfg, fiquei um pouco confuso pois normalmente nesses casos utiliza-se a seguinte forma:</p>
+
+<div><figure role=code><figcaption><span>collection_some_attribute.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">collection</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">resource</span><span class="o">|</span>
+</div><div class='line'>  <span class="n">resource</span><span class="o">.</span><span class="n">some_attribute</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>Então pesquisei um pouco sobre essa &#8220;magica&#8221; e encontrei esse <a href="http://pragdave.pragprog.com/pragdave/2005/11/symbolto_proc.html">post</a> ( em inglês ).</p>
+
+<h2>Na pratica:</h2>
+
+<p>Tenho um array com palavras e quero um array com as mesmas palavras, porem todas maiúsculas.</p>
+
+<div><figure role=code><figcaption><span>upcase_words.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">words</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="o">]</span>
+</div><div class='line'><span class="n">up</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:upcase</span><span class="p">)</span> <span class="c1">#=&gt; [&quot;HELLO&quot;, &quot;WORLD&quot;]</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>[]&#8217;s</p>
 </div>
 
 
@@ -135,18 +163,24 @@ agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvol
 
 
 
-<time datetime="2011-08-19 15:35:00 -0300" pubdate  updated >Aug 19<span>th</span>, 2011</time>
+<time datetime="2011-08-23 13:51:00 -0300" pubdate  updated >Aug 23<span>rd</span>, 2011</time>
 
 
 
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dicas/'>dicas</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://devton.github.com/blog/2011/08/19/hello-world/" data-via="dev_ton" data-counturl="http://devton.github.com/blog/2011/08/19/hello-world/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://devton.github.com/blog/2011/08/23/symbol-to_proc/" data-via="dev_ton" data-counturl="http://devton.github.com/blog/2011/08/23/symbol-to_proc/" >Tweet</a>
   
   
   <g:plusone size="medium"></g:plusone>
@@ -162,8 +196,8 @@ agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvol
     <div id="disqus_thread"><div id="disqus_thread"></div>
 <script type="text/javascript">
   var disqus_shortname = 'devtonblog';
-  var disqus_identifier = 'http://devton.github.com/blog/2011/08/19/hello-world/';
-  var disqus_url = 'http://devton.github.com/blog/2011/08/19/hello-world/';
+  var disqus_identifier = 'http://devton.github.com/blog/2011/08/23/symbol-to_proc/';
+  var disqus_url = 'http://devton.github.com/blog/2011/08/23/symbol-to_proc/';
   //var disqus_developer = 1;
   (function() {
     var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

@@ -100,6 +100,70 @@
     
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/08/23/symbol-to_proc/">Symbol#to_proc, Um Atalho Interessante :)</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+<time datetime="2011-08-23 13:51:00 -0300" pubdate  updated >Aug 23<span>rd</span>, 2011</time>
+
+
+</p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Uma vez estava feliz dando manutenção em um código que continha a seguinte linha:</p>
+
+<div><figure role=code><figcaption><span>collection_some_attribute.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">collection</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:some_attribute</span><span class="p">)</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>omfg, fiquei um pouco confuso pois normalmente nesses casos utiliza-se a seguinte forma:</p>
+
+<div><figure role=code><figcaption><span>collection_some_attribute.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">collection</span><span class="o">.</span><span class="n">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">resource</span><span class="o">|</span>
+</div><div class='line'>  <span class="n">resource</span><span class="o">.</span><span class="n">some_attribute</span>
+</div><div class='line'><span class="k">end</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>Então pesquisei um pouco sobre essa &#8220;magica&#8221; e encontrei esse <a href="http://pragdave.pragprog.com/pragdave/2005/11/symbolto_proc.html">post</a> ( em inglês ).</p>
+
+<h2>Na pratica:</h2>
+
+<p>Tenho um array com palavras e quero um array com as mesmas palavras, porem todas maiúsculas.</p>
+
+<div><figure role=code><figcaption><span>upcase_words.rb </span></figcaption>
+ <div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+</pre></td><td class='code' width='100%'><pre><code class='rb'><div class='line'><span class="n">words</span> <span class="o">=</span> <span class="o">[</span><span class="s1">&#39;hello&#39;</span><span class="p">,</span> <span class="s1">&#39;world&#39;</span><span class="o">]</span>
+</div><div class='line'><span class="n">up</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:upcase</span><span class="p">)</span> <span class="c1">#=&gt; [&quot;HELLO&quot;, &quot;WORLD&quot;]</span>
+</div></code></pre></td></tr></table></div></figure></div>
+
+
+<p>[]&#8217;s</p>
+</div>
+  <footer>
+    <a rel="full-article" href="/blog/2011/08/23/symbol-to_proc/">Read on &rarr;</a>
+  </footer>
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/08/22/rs-on-rails-com-r--50/">RS on Rails Com R$ 50</a></h1>
     
     
@@ -200,6 +264,10 @@ agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvol
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2011/08/23/symbol-to_proc/">Symbol#to_proc, um atalho interessante :)</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2011/08/22/rs-on-rails-com-r--50/">RS on Rails com R$ 50</a>
