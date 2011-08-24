@@ -4,13 +4,68 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-08-23T13:57:15-03:00</updated>
+  <updated>2011-08-24T14:29:15-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
     
   </author>
 
+  
+  <entry>
+    <title>Para Quem Ta Começando Com Ruby!</title>
+    <link href="http://devton.github.com/blog/2011/08/24/para-quem-ta-come-ando-com-ruby/"/>
+    <updated>2011-08-24T11:43:00-03:00</updated>
+    <id>http://devton.github.com/blog/2011/08/24/para-quem-ta-come-ando-com-ruby</id>
+    <content type="html">&lt;p&gt;Pessoas, &lt;br/&gt;
+no post de hoje vou dar algumas dicas de onde aprimorar ou começar seus estudos com ruby.&lt;/p&gt;
+
+&lt;h1&gt;Video Aulas&lt;/h1&gt;
+
+&lt;p&gt;Deixando aqui uma lista de sites com video aulas:&lt;/p&gt;
+
+&lt;h2&gt;RubyCasts&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rubycasts.com.br/images/logo.png&quot; alt=&quot;RubyCasts&quot; /&gt;
+&lt;a href='http://rubycasts.com.br' target='blank'&gt;RubyCasts&lt;/a&gt; é um site de video aulas sobre ruby em geral, projeto recém criado e mantido pelo &lt;a href='http://twitter.com/tomas_stefano' target='blank'&gt;@tomas_stefano&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;RailsCasts&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://railscasts.com/images/railscasts_logo.png&quot; alt=&quot;RailsCasts&quot; /&gt;
+&lt;a href='http://railscasts.com' target='blank'&gt;RailsCasts&lt;/a&gt; é um site de video aulas sobre Ruby on Rails, projeto criado e mantido pelo &lt;a href='http://twitter.com/rbates' target='blank'&gt;@rbates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;RailsLab&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://railslab.newrelic.com/images/masthead-railslab.png&quot; alt=&quot;RailsLab&quot; /&gt;
+&lt;a href='http://railslab.newrelic.com/' target='blank'&gt;RailsLab&lt;/a&gt; é um site aonde ensinam técnicas avanças de para melhorar a performance de sua aplicação Ruby on Rails, projeto mantido pela &lt;a href='http://twitter.com/NewRelic' target='blank'&gt;@NewRelic&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;RubyTube&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://rubytu.be/images/rubytube.png&quot; alt=&quot;RubyTube&quot; /&gt;
+&lt;a href='http://rubytu.be/' target='blank'&gt;RubyTube&lt;/a&gt; é um site que contem varios links apontando para diversos videos sobre Ruby.&lt;/p&gt;
+
+&lt;h1&gt;Que tal escutar? ( Podcasts )&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubyshow.com/&quot;&gt;The RubyShow&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://ruby5.envylabs.com/&quot;&gt;Ruby 5&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://podcast.rubyonrails.org/&quot;&gt;Rails podcast&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://thechangelog.com/&quot;&gt;TheChangeLog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h1&gt;Para leitura&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://programmingzen.com/ruby-and-rails-recommended-books/&quot;&gt;Lista de alguns livros recomendados&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://mislav.uniqpath.com/poignant-guide/&quot;&gt;Why's (Poignant) Guide to Ruby&lt;/a&gt; ( recomendo! )&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Bom pessoal acho que pra quem ta começando tem ate bastante conteúdo ai pra acompanhar ;).
+&lt;strong&gt;P.S:&lt;/strong&gt; Se alguém souber de outros links compartilhe ai nos comentários! o/&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Symbol#to_proc, um atalho interessante :)</title>
