@@ -17,11 +17,17 @@
         <lastmod>2011-08-24T14:27:56-03:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://devton.github.com/blog/2011/08/30/instance_eval-deixando-alguns-setups-mais-bonitos/
+        </loc>
+        <lastmod>2011-08-30T21:37:52-03:00</lastmod>
+    </url>
+    <url>
         <loc>http://devton.github.com/blog/archives/</loc>
-        <lastmod>2011-08-24T14:27:56-03:00</lastmod>
+        <lastmod>2011-08-30T21:37:52-03:00</lastmod>
     </url>
     <url>
         <loc>http://devton.github.com/</loc>
-        <lastmod>2011-08-24T14:27:56-03:00</lastmod>
+        <lastmod>2011-08-30T21:37:52-03:00</lastmod>
     </url>
 </urlset>

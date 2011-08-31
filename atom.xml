@@ -4,13 +4,92 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-08-24T14:29:15-03:00</updated>
+  <updated>2011-08-30T21:38:36-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
     
   </author>
 
+  
+  <entry>
+    <title>instance_eval, deixando alguns setups mais bonitos.</title>
+    <link href="http://devton.github.com/blog/2011/08/30/instance_eval-deixando-alguns-setups-mais-bonitos/"/>
+    <updated>2011-08-30T19:15:00-03:00</updated>
+    <id>http://devton.github.com/blog/2011/08/30/instance_eval-deixando-alguns-setups-mais-bonitos</id>
+    <content type="html">&lt;p&gt;Companheiros ;)&lt;/p&gt;
+
+&lt;p&gt;Como já tem alguns dias que não posto nada aqui, decidi compartilhar uma dica bacana com vocês sobre o 'instance_eval'.&lt;/p&gt;
+
+&lt;p&gt;Para quem não conhece o 'instance_eval' ele permite que você edite a classe e ou variável naquela instancia, podendo alterar todo o seu comportamento a seguir (na instancia), falando a grosso modo uma maneira de você alterar as instancias em tempo de execução 'runtime' :).&lt;/p&gt;
+
+&lt;h2&gt;Let's Rock!&lt;/h2&gt;
+
+&lt;p&gt;Eu gosto de usar o instance_eval para criar setups das classes de uma forma mais 'bonita' ao meu ver :)
+Vejo também que algumas pessoas utilizam para criar suas proprias DSL &lt;em&gt;&lt;em&gt;ta ai acho que vou falar sobre DSL no próximo post ;)&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;normalmente fazemos:&lt;/p&gt;
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Pessoa
+  attr_accessor :nome, :idade, :cidade
+
+  def initialize(nome,idade,cidade)
+    @nome,@idade,@cidade=nome,idade,cidade
+  end
+
+  def gritou!
+    &quot;AEWW!!!, meu nome é #{@nome}, tenho #{idade} anos e sou de #{cidade}.&quot;
+  end
+end
+
+@marcos = Pessoa.new('Marcos Paulo', 19, 'São Paulo')
+puts @marcos.gritou!
+# =&amp;gt; &quot;AEWW!!!, meu nome é Marcos Paulo, tenho 19 anos e sou de São Paulo&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;Bom um exemplo bem simples mesmo de uma pessoa gritando ;)
+bom agora usando o mesmo exemplo porem com instance_eval:&lt;/p&gt;
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class Pessoa
+  attr_accessor :nome, :idade, :cidade
+
+  def initialize(&amp;amp;block)
+    instance_eval(&amp;amp;block) if block_given?
+  end
+
+  def gritou!
+    &quot;AEWW!!!, meu nome é #{@nome}, tenho #{idade} anos e sou de #{cidade}.&quot;
+  end
+end
+
+@marcos = Pessoa.new do |marcos|
+  marcos.nome = 'Marcos Paulo'
+  marcos.idade = 19
+  marcos.cidade = 'São Paulo'
+end
+puts @marcos.gritou!
+# =&amp;gt; &quot;AEWW!!!, meu nome é Marcos Paulo, tenho 19 anos e sou de São Paulo&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;Ta ai xD, um exemplo bem simples mesmo de &quot;como&quot; utilizar o instance_eval.&lt;/p&gt;
+
+&lt;p&gt;No próximo post eu já explico outros casos de quando usar o instance_eval e também sobre blocos.&lt;/p&gt;
+
+&lt;p&gt;O que vocês acham de falar sobre DSL? &lt;em&gt;comentem :)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Abraços e ate a próxima \o/&lt;/p&gt;
+
+&lt;p&gt;[]'s&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Para Quem Ta Começando Com Ruby!</title>
