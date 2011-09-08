@@ -4,7 +4,7 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-09-08T15:02:20-03:00</updated>
+  <updated>2011-09-08T15:17:46-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
@@ -129,7 +129,7 @@ para mais informação só consultar a &lt;a href=&quot;http://compass-style.org
 
 &lt;p&gt;Pra quem não conhece o &lt;a href=&quot;http://compass-style.org/&quot;&gt;&lt;strong&gt;compass&lt;/strong&gt;&lt;/a&gt; é um framework css que utiliza o &lt;a href=&quot;http://sass-lang.com/&quot;&gt;&lt;strong&gt;sass&lt;/strong&gt;&lt;/a&gt; por baixo ( possibilitando utilizar variáveis, mixins e outros )&lt;/p&gt;
 
-&lt;p&gt;nesse post vou ensinar como instalar o compass no rails 3.1, pois é não é apenas colocar no gemfile kkk.&lt;/p&gt;
+&lt;p&gt;nesse post vou ensinar como instalar o compass no rails 3.1, pois não é apenas colocar no gemfile kkk.&lt;/p&gt;
 
 &lt;h2&gt;Bom, vamos la!&lt;/h2&gt;
 
