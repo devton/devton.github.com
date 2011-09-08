@@ -4,13 +4,77 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-08-30T21:38:36-03:00</updated>
+  <updated>2011-09-08T14:02:30-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
     
   </author>
 
+  
+  <entry>
+    <title>Compass No Rails 3.1</title>
+    <link href="http://devton.github.com/blog/2011/09/08/compass-no-rails-3-1/"/>
+    <updated>2011-09-08T12:13:00-03:00</updated>
+    <id>http://devton.github.com/blog/2011/09/08/compass-no-rails-3-1</id>
+    <content type="html">&lt;p&gt;Amigos,&lt;/p&gt;
+
+&lt;p&gt;ta ficando cada dia mais difícil pensar em um assunto para escrever sobre.&lt;/p&gt;
+
+&lt;p&gt;Então aproveitando que essa semana trabalhei bastante no front-end de algumas aplicações decidi escrever sobre o compass.&lt;/p&gt;
+
+&lt;p&gt;Pra quem não conhece o &lt;a href=&quot;http://compass-style.org/&quot;&gt;&lt;strong&gt;compass&lt;/strong&gt;&lt;/a&gt; é um framework css que utiliza o &lt;a href=&quot;http://sass-lang.com/&quot;&gt;&lt;strong&gt;sass&lt;/strong&gt;&lt;/a&gt; por baixo ( possibilitando utilizar variáveis, mixins e outros )&lt;/p&gt;
+
+&lt;p&gt;nesse post vou ensinar como instalar o compass no rails 3.1, pois é não é apenas colocar no gemfile kkk.&lt;/p&gt;
+
+&lt;h2&gt;Bom, vamos la!&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;coloque no gemfile dentro do grupo assets:&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;group :assets do
+  gem 'compass', :git =&amp;gt; 'git://github.com/chriseppstein/compass.git', :branch =&amp;gt; 'rails31'  
+end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;no seu application.rb faça o require do grupo assets ( normalmente já vem automático ):&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Bundler.require *Rails.groups(:assets =&amp;gt; %w(development test))
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;agora por ultimo crie um script em config/initializers/compass.rb ( o nome do arquivo pode ser qualquer um ), e dentro coloque o seguinte código:&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;``` ruby&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Rails.configuration.sass.tap do |config|
+    config.load_paths &amp;lt;&amp;lt; &quot;#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets&quot;
+end 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;pronto! você já tem os módulos do compass em seu projeto!
+estou escrevendo também um post sobre o modulo css3 do compass. logo logo ta ai!&lt;/p&gt;
+
+&lt;p&gt;ate a próxima! :]&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>instance_eval, deixando alguns setups mais bonitos.</title>
