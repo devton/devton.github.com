@@ -100,6 +100,132 @@
     
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/09/08/compass-css3--o/">Compass/css3 \o/</a></h1>
+    
+    
+      <p class="meta">
+
+
+
+
+<time datetime="2011-09-08 14:59:00 -0300" pubdate  updated >Sep 8<span>th</span>, 2011</time>
+
+
+</p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Amigos!</p>
+
+<p>aproveitando a empolgação! como disse no post anterior, esses dias eu trabalhei muito com front-end então pensei em escrever para vocês sobre o <strong>compass</strong>, que utilizei muito o modulo do css3 dele.</p>
+
+<p>Pra quem não conhece o <a href="http://compass-style.org/"><strong>compass</strong></a> é um framework css que utiliza o <a href="http://sass-lang.com/"><strong>sass</strong></a> por baixo ( possibilitando utilizar variáveis, mixins e outros )</p>
+
+<h2>Bom vamos lá!</h2>
+
+<p>Nesse post vou explicar sobre alguns mixins &#8216;helpers&#8217; do modulo compass/css3 que utilizei bastante.</p>
+
+<h3>Bordas arredondadas!</h3>
+
+<p>É sempre um parto! ter que ficar utilizando algo do tipo:</p>
+
+<p>Bordas arredondadas igualmente com css3:</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+</pre></td><td class='code' width='100%'><pre><code class='css'><div class='line'><span class="nc">.box-radius-3px</span> <span class="p">{</span>
+</div><div class='line'>  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
+</div><div class='line'>  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
+</div><div class='line'>  <span class="k">border</span><span class="o">-</span><span class="n">radius</span><span class="o">:</span> <span class="m">3px</span><span class="p">;</span>
+</div><div class='line'> <span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>imagina ter que ficar repetindo essa classe toda vez que você precisar utilizar uma borda arredondada com mais de 3px ( box-radius-2px e por ai em diante ).</p>
+
+<p>já com o <strong>sass</strong> ( não ia falar sobre mas vou comentar só esse exemplo :) ):</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+<span class='line'>5</span>
+<span class='line'>6</span>
+<span class='line'>7</span>
+<span class='line'>8</span>
+<span class='line'>9</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="k">@mixin</span><span class="nf"> border-radius</span><span class="p">(</span><span class="nv">$px</span><span class="o">:</span> <span class="s1">&#39;</span><span class="s2">3px&#39;</span><span class="p">)</span> <span class="p">{</span>
+</div><div class='line'>  <span class="na">-webkit-border-radius</span><span class="o">:</span> <span class="nv">$px</span><span class="p">;</span>
+</div><div class='line'>  <span class="na">-moz-border-radius</span><span class="o">:</span> <span class="nv">$px</span><span class="p">;</span>
+</div><div class='line'>  <span class="na">border-radius</span><span class="o">:</span> <span class="nv">$px</span><span class="p">;</span>
+</div><div class='line'><span class="p">}</span>
+</div><div class='line'>
+</div><div class='line'><span class="nc">.box-radius-3px</span> <span class="p">{</span>
+</div><div class='line'>  <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">();</span> <span class="c1">// padrão já é 3px</span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>você escreve um pouco a mais, porem consegue reaproveitar usando os mixins.</p>
+
+<p>bom agora vamos ao interessante!!! o compass/css3
+para incluir os helpers do compass/css3 você deve usar o seguinte comando em cima do seu arquivo &#8216;.scss&#8217;:</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="k">@import</span> <span class="s1">&#39;</span><span class="s2">compass/css3&#39;</span><span class="p">;</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>pronto! já pode aproveitar de vários helpers do compass css3! como por exemplo:</p>
+
+<p>bordas arredondadas:</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="nc">.suaclasse</span> <span class="p">{</span>
+</div><div class='line'>  <span class="k">@include</span><span class="nd"> border-radius</span><span class="p">(</span><span class="mi">2</span><span class="kt">px</span><span class="o">,</span> <span class="mi">2</span><span class="kt">px</span><span class="p">);</span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>sombra &#8216;box shadow&#8217;</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+<span class='line'>4</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="nc">.suaclasse</span> <span class="p">{</span>
+</div><div class='line'>  <span class="k">@include</span><span class="nd"> box-shadow</span><span class="p">(</span><span class="mh">#333</span><span class="o">,</span> <span class="mi">0</span><span class="kt">px</span><span class="o">,</span> <span class="mi">3</span><span class="kt">px</span><span class="o">,</span> <span class="mi">10</span><span class="kt">px</span><span class="p">);</span>
+</div><div class='line'>  <span class="c1">// cor, descolamento horizontal, descolamento vertical, blur. </span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>opacidade</p>
+
+<figure role=code><div class="highlight"><table cellpadding="0" cellspacing="0"><tr><td class="gutter"><pre class="line-numbers"><span class='line'>1</span>
+<span class='line'>2</span>
+<span class='line'>3</span>
+</pre></td><td class='code' width='100%'><pre><code class='scss'><div class='line'><span class="nc">.suaclasse</span> <span class="p">{</span>
+</div><div class='line'>  <span class="k">@include</span><span class="nd"> opacity</span><span class="p">(</span><span class="mi">0</span><span class="mf">.8</span><span class="p">);</span> <span class="c1">// 80%</span>
+</div><div class='line'><span class="p">}</span>
+</div></code></pre></td></tr></table></div></figure>
+
+<p>São muitos helpers!!! esses foram os que eu mais utilizei!
+para mais informação só consultar a <a href="http://compass-style.org/reference/compass/css3/">documentação</a></p>
+</div>
+  <footer>
+    <a rel="full-article" href="/blog/2011/09/08/compass-css3--o/">Read on &rarr;</a>
+  </footer>
+
+
+  </article>
+
+
+  <article>
+    
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2011/09/08/compass-no-rails-3-1/">Compass No Rails 3.1</a></h1>
     
     
@@ -548,6 +674,10 @@ agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvol
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2011/09/08/compass-css3--o/">Compass/css3 \o/</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2011/09/08/compass-no-rails-3-1/">Compass No Rails 3.1</a>
       </li>
     
@@ -561,10 +691,6 @@ agora é fazer o máximo para ter um tempo disponível para falar sobre Desenvol
     
       <li class="post">
         <a href="/blog/2011/08/23/symbol-to_proc/">Symbol#to_proc, um atalho interessante :)</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2011/08/22/rs-on-rails-com-r--50/">RS on Rails com R$ 50</a>
       </li>
     
   </ul>

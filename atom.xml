@@ -4,13 +4,117 @@
   <title>devTon Blog</title>
   <link href="http://devton.github.com/atom.xml" rel="self"/>
   <link href="http://devton.github.com/"/>
-  <updated>2011-09-08T14:02:30-03:00</updated>
+  <updated>2011-09-08T15:02:20-03:00</updated>
   <id>http://devton.github.com/</id>
   <author>
     <name>Antônio Roberto Silva</name>
     
   </author>
 
+  
+  <entry>
+    <title>Compass/css3 \o/</title>
+    <link href="http://devton.github.com/blog/2011/09/08/compass-css3--o/"/>
+    <updated>2011-09-08T14:59:00-03:00</updated>
+    <id>http://devton.github.com/blog/2011/09/08/compass-css3--o</id>
+    <content type="html">&lt;p&gt;Amigos!&lt;/p&gt;
+
+&lt;p&gt;aproveitando a empolgação! como disse no post anterior, esses dias eu trabalhei muito com front-end então pensei em escrever para vocês sobre o &lt;strong&gt;compass&lt;/strong&gt;, que utilizei muito o modulo do css3 dele.&lt;/p&gt;
+
+&lt;p&gt;Pra quem não conhece o &lt;a href=&quot;http://compass-style.org/&quot;&gt;&lt;strong&gt;compass&lt;/strong&gt;&lt;/a&gt; é um framework css que utiliza o &lt;a href=&quot;http://sass-lang.com/&quot;&gt;&lt;strong&gt;sass&lt;/strong&gt;&lt;/a&gt; por baixo ( possibilitando utilizar variáveis, mixins e outros )&lt;/p&gt;
+
+&lt;h2&gt;Bom vamos lá!&lt;/h2&gt;
+
+&lt;p&gt;Nesse post vou explicar sobre alguns mixins 'helpers' do modulo compass/css3 que utilizei bastante.&lt;/p&gt;
+
+&lt;h3&gt;Bordas arredondadas!&lt;/h3&gt;
+
+&lt;p&gt;É sempre um parto! ter que ficar utilizando algo do tipo:&lt;/p&gt;
+
+&lt;p&gt;Bordas arredondadas igualmente com css3:&lt;/p&gt;
+
+&lt;p&gt;``` css&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.box-radius-3px {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+ }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;imagina ter que ficar repetindo essa classe toda vez que você precisar utilizar uma borda arredondada com mais de 3px ( box-radius-2px e por ai em diante ).&lt;/p&gt;
+
+&lt;p&gt;já com o &lt;strong&gt;sass&lt;/strong&gt; ( não ia falar sobre mas vou comentar só esse exemplo :) ):&lt;/p&gt;
+
+&lt;p&gt;``` scss&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@mixin border-radius($px: '3px') {
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;   
+}
+
+.box-radius-3px {
+  @include border-radius(); // padrão já é 3px
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;você escreve um pouco a mais, porem consegue reaproveitar usando os mixins.&lt;/p&gt;
+
+&lt;p&gt;bom agora vamos ao interessante!!! o compass/css3
+para incluir os helpers do compass/css3 você deve usar o seguinte comando em cima do seu arquivo '.scss':&lt;/p&gt;
+
+&lt;p&gt;``` scss&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@import 'compass/css3';
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;pronto! já pode aproveitar de vários helpers do compass css3! como por exemplo:&lt;/p&gt;
+
+&lt;p&gt;bordas arredondadas:&lt;/p&gt;
+
+&lt;p&gt;``` scss&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.suaclasse {
+  @include border-radius(2px, 2px);
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;sombra 'box shadow'&lt;/p&gt;
+
+&lt;p&gt;``` scss&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.suaclasse {
+  @include box-shadow(#333, 0px, 3px, 10px); 
+  // cor, descolamento horizontal, descolamento vertical, blur. 
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;opacidade&lt;/p&gt;
+
+&lt;p&gt;``` scss&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.suaclasse {
+  @include opacity(0.8); // 80%
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;```&lt;/p&gt;
+
+&lt;p&gt;São muitos helpers!!! esses foram os que eu mais utilizei!
+para mais informação só consultar a &lt;a href=&quot;http://compass-style.org/reference/compass/css3/&quot;&gt;documentação&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <title>Compass No Rails 3.1</title>
